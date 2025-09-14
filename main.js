@@ -48,9 +48,10 @@ const piatti = [
     {nome: "Speck tartufata", descrizione: "Una combinazione di sapori unica e irresistibile.", img: "img/Speck tartufata.jpeg"}
 ];
 
-const menuGrid = document.getElementById('menu-grid');
 
 async function showPiatti(){
+    const menuGrid = document.getElementById('menu-grid');
+    menuGrid.innerHTML = "";
     piatti.forEach(piatto => {
         const item = document.createElement('div');
         item.classList.add('menu-item');
@@ -92,7 +93,7 @@ const homeImg = [
 ];
     homeImg.forEach(hImg => {
         const item = document.createElement('div');
-        item.classList.add('menu-item');
+        item.classList.add('home-item');
 
         const img = document.createElement('img');
         img.src = hImg.img;
