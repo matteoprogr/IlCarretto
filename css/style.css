@@ -21,7 +21,7 @@ body {
 /* Navbar */
 /* Navbar */
 .nav {
-    background-color: #333;
+    background-color: #08025e;
     color: #fff;
 }
 
@@ -65,6 +65,7 @@ body {
 .page-section {
     padding: 4rem 0;
     display: none;
+    background-color: #edb04d;
 }
 
 .page-section.active {
@@ -106,7 +107,7 @@ body {
 
 
 .footer {
-    background-color: #333;
+    background-color: #08025e;
     color: #fff;
     padding: 2rem 1rem 1rem 1rem;
     margin-top: 2rem;
@@ -146,4 +147,53 @@ body {
     margin-top: 1rem;
     border-top: 1px solid #555;
     padding-top: 0.5rem;
+}
+
+#contatti {
+    padding: 3rem 1rem;
+}
+
+#contatti h2 {
+    margin-bottom: 1.5rem;
+    color: #08025e;
+}
+
+.contatti-info p {
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+}
+
+.contatti-info a {
+    text-decoration: none;
+}
+
+.contatti-info a:hover {
+    text-decoration: underline;
+}
+/* Social links */
+.contatti-social, .footer-social {
+    margin-top: 1rem;
+}
+
+.contatti-social a{
+    display: inline-block;
+    margin: 0 0.5rem;
+    font-size: 1.2rem;
+    color: #08025e;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-social a {
+    display: inline-block;
+    margin: 0 0.5rem;
+    font-size: 1.2rem;
+    color: #edb04d; /* giallo-arancio */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contatti-social a:hover,
+.footer-social a:hover {
+    color: #fff;
 }

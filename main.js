@@ -17,20 +17,22 @@ function showSection(sectionId) {
             link.classList.add('active'); // Evidenzia il link selezionato
         }
     });
+    showHome();
 }
 
 // Aggiungi l'evento click a tutti i link della navbar
 navLinks.forEach(link => {
     link.addEventListener('click', (e) => {
-        e.preventDefault(); // Impedisce il comportamento di default (scroll)
-        const targetSection = link.getAttribute('href').substring(1); // prende l'id senza #
+        e.preventDefault();
+        const targetSection = link.getAttribute('href').substring(1);
+         if(targetSection === "menu"){ showPiatti(); }
+         if(targetSection === "home"){ showHome(); }
         showSection(targetSection);
+
     });
 });
 
-// Mostra di default la sezione "home"
 showSection('home');
-
 
 
 // Array di piatti: puoi anche generarlo dinamicamente dal backend
@@ -46,27 +48,60 @@ const piatti = [
     {nome: "Speck tartufata", descrizione: "Una combinazione di sapori unica e irresistibile.", img: "img/Speck tartufata.jpeg"}
 ];
 
-// Seleziona il container
 const menuGrid = document.getElementById('menu-grid');
 
-// Genera dinamicamente i div dei piatti
-piatti.forEach(piatto => {
-    const item = document.createElement('div');
-    item.classList.add('menu-item');
+async function showPiatti(){
+    piatti.forEach(piatto => {
+        const item = document.createElement('div');
+        item.classList.add('menu-item');
 
-    const img = document.createElement('img');
-    img.src = piatto.img;
-    img.alt = piatto.nome;
+        const img = document.createElement('img');
+        img.src = piatto.img;
+        img.alt = piatto.nome;
 
-    const titolo = document.createElement('h3');
-    titolo.textContent = piatto.nome;
+        const titolo = document.createElement('h3');
+        titolo.textContent = piatto.nome;
 
-    const desc = document.createElement('p');
-    desc.textContent = piatto.descrizione;
+        const desc = document.createElement('p');
+        desc.textContent = piatto.descrizione;
 
-    item.appendChild(img);
-    item.appendChild(titolo);
-    item.appendChild(desc);
+        item.appendChild(img);
+        item.appendChild(titolo);
+        item.appendChild(desc);
 
-    menuGrid.appendChild(item);
-});
+        menuGrid.appendChild(item);
+    });
+}
+
+async function showHome(){
+const homeGrid = document.getElementById('home-grid');
+homeGrid.innerHTML = "";
+const homeImg = [
+    {img: "img/home1.jpg"},
+    {img: "img/home2.jpg"},
+    {img: "img/home3.jpg"},
+    {img: "img/home4.jpg"},
+    {img: "img/home5.jpg"},
+    {img: "img/home6.jpg"},
+    {img: "img/home7.jpg"},
+    {img: "img/home8.jpg"},
+    {img: "img/home9.jpg"},
+    {img: "img/home10.jpg"},
+    {img: "img/home11.jpg"},
+    {img: "img/home12.jpg"}
+];
+    homeImg.forEach(hImg => {
+        const item = document.createElement('div');
+        item.classList.add('menu-item');
+
+        const img = document.createElement('img');
+        img.src = hImg.img;
+        //img.alt = img.nome;
+
+        item.appendChild(img);
+
+        homeGrid.appendChild(item);
+    });
+}
+
+
