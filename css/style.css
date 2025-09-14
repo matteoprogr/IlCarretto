@@ -17,15 +17,16 @@ body, html {
 }
 
 .container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 2rem;
+    width: clamp(20rem, 90%, 75rem);
+    margin: 0 auto;
 }
+
 
 .container-home {
     margin: auto;
     padding: 2rem;
 }
+
 h2 {
     text-align: center
 }
@@ -37,18 +38,19 @@ h2 {
 }
 
 .nav-container {
-    margin: auto;
+    width: 100%;
+    max-width: clamp(20rem, 90%, 70rem);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0.5rem 2rem;
+    padding: 0.5rem;
 }
 
 .nav ul {
-    flex-basis: 55%;
     display: flex;
     list-style: none;
-    gap: 1.5rem;
+    gap: 0.5rem;
+
 }
 
 .nav ul li a {
@@ -61,15 +63,16 @@ h2 {
 .nav ul li a.active,
 .nav ul li a:hover {
     background-color: #555;
-    border-radius: 5px;
+    border-radius: 0.5rem;
 }
+
 
 /* Logo */
 .logo img {
-    flex-basis: 45%;
-    height: 50px;
+    height: 3rem;
     width: auto;
 }
+
 
 
 /* Sezioni */
@@ -77,6 +80,7 @@ h2 {
     flex: 1;
     display: none;
     background-color: #edb04d;
+    padding-bottom: 1rem;
 }
 
 .page-section.active {
@@ -96,7 +100,7 @@ h2 {
 
 .home-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     gap: 2rem;
     margin-top: 2rem;
 }
@@ -104,38 +108,36 @@ h2 {
 /* Menu */
 .menu-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
     gap: 2rem;
     margin-top: 2rem;
 }
 
 .menu-item {
     background-color: #fff;
-    padding: 1rem;
-    border-radius: 10px;
+    padding: 0.15rem;
+    border-radius: 1rem;
     text-align: center;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.1);
 }
 
 .menu-item img {
     width: 100%;
-    border-radius: 10px;
-    margin-bottom: 1rem;
+    border-radius: 1rem;
 }
 
 .home-item {
     background-color: #fff;
-    padding: 0.1rem;
-    border-radius: 10px;
+    padding: 0.15rem;
+    border-radius: 1rem;
     text-align: center;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.1);
 }
 
 .home-item img {
     width: 100%;
     height: 100%;
-    border-radius: 10px;
-    margin-bottom: 1rem;
+    border-radius: 1rem;
 }
 
 
@@ -157,8 +159,9 @@ h2 {
 }
 
 .footer-container {
-    max-width: 1200px;
-    margin: auto;
+    width: 100%;
+    max-width: clamp(20rem, 90%, 75rem);
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -167,20 +170,21 @@ h2 {
 
 .footer-info {
     flex: 1;
-    min-width: 250px;
+    min-width: 15rem;
 }
 
 .footer-social {
     flex: 1;
-    min-width: 200px;
+    min-width: 12.5rem;
 }
 
 .footer-bottom {
     text-align: center;
     margin-top: 1rem;
-    border-top: 1px solid #555;
+    border-top: 0.0625rem solid #555;
     padding-top: 0.5rem;
 }
+
 
 #contatti {
     padding: 3rem 1rem;
