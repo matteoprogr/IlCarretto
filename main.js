@@ -45,7 +45,7 @@ const piatti = [
     {nome: "Margherita", descrizione: "Delizioso piatto con ingredienti freschi e genuini.", img: "img/Margherita.jpeg"},
     {nome: "Patate", descrizione: "Una combinazione di sapori unica e irresistibile.", img: "img/Patate.jpeg"},
     {nome: "Rossa", descrizione: "Perfetto per chi ama i piatti leggeri e gustosi.", img: "img/Rossa.jpeg"},
-    {nome: "Speck tartufata", descrizione: "Una combinazione di sapori unica e irresistibile.", img: "img/Speck tartufata.jpeg"}
+    {nome: "Speck Tartufata", descrizione: "Una combinazione di sapori unica e irresistibile.", img: "img/Speck Tartufata.jpeg"}
 ];
 
 
