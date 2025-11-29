@@ -192,7 +192,7 @@ h2 {
 
 #contatti h2 {
     margin-bottom: 1.5rem;
-    color: #08025e;
+    /*color: #08025e;*/
 }
 
 .contatti-info p {
@@ -201,14 +201,24 @@ h2 {
 }
 
 .contatti-info a {
-    text-decoration: none;
+        display: inline-block;
+        margin: 0 0.5rem;
+        font-size: 1.2rem;
+        color: #08025e;
+        text-decoration: none;
+        transition: color 0.3s;
 }
 
 .contatti-info a:hover {
     text-decoration: underline;
 }
 /* Social links */
-.contatti-social, .footer-social {
+.contatti-social {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+.footer-social {
     margin-top: 1rem;
 }
 
@@ -233,4 +243,21 @@ h2 {
 .contatti-social a:hover,
 .footer-social a:hover {
     color: #fff;
+}
+
+.titolo{
+    color: #f9f9f9;
+    background-color: #08025e;
+    padding: 10px 20px;
+    font-weight: 700;
+    border: 2px solid #08025e;
+    border-radius: 6px;
+}
+
+.contatti-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
 }
