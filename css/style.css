@@ -39,7 +39,6 @@ h2 {
 
 .nav-container {
     width: 100%;
-    max-width: clamp(20rem, 90%, 70rem);
     display: flex;
     align-items: center;
     justify-content: space-between;

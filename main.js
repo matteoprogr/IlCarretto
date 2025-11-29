@@ -25,7 +25,6 @@ navLinks.forEach(link => {
     link.addEventListener('click', (e) => {
         e.preventDefault();
         const targetSection = link.getAttribute('href').substring(1);
-         if(targetSection === "menu"){ showPiatti(); }
          if(targetSection === "home"){ showHome(); }
         showSection(targetSection);
 
@@ -35,61 +34,13 @@ navLinks.forEach(link => {
 showSection('home');
 
 
-// Array di piatti: puoi anche generarlo dinamicamente dal backend
-const piatti = [
-    {nome: "Broccoli e Salsiccia", descrizione: "Delizioso piatto con ingredienti freschi e genuini.", img: "img/Broccoli e Salsiccia.jpeg"},
-    {nome: "Capricciosa", descrizione: "Una combinazione di sapori unica e irresistibile.", img: "img/Capricciosa.jpeg"},
-    {nome: "Carbonara", descrizione: "Perfetto per chi ama i piatti leggeri e gustosi.", img: "img/Carbonara.jpeg"},
-    {nome: "Diavola", descrizione: "Delizioso piatto con ingredienti freschi e genuini.", img: "img/Diavola.jpeg"},
-    {nome: "Focaccia", descrizione: "Una combinazione di sapori unica e irresistibile.", img: "img/Focaccia.jpeg"},
-    {nome: "Margherita", descrizione: "Delizioso piatto con ingredienti freschi e genuini.", img: "img/Margherita.jpeg"},
-    {nome: "Patate", descrizione: "Una combinazione di sapori unica e irresistibile.", img: "img/Patate.jpeg"},
-    {nome: "Rossa", descrizione: "Perfetto per chi ama i piatti leggeri e gustosi.", img: "img/Rossa.jpeg"},
-    {nome: "Speck Tartufata", descrizione: "Una combinazione di sapori unica e irresistibile.", img: "img/Speck Tartufata.jpeg"}
-];
-
-
-async function showPiatti(){
-    const menuGrid = document.getElementById('menu-grid');
-    menuGrid.innerHTML = "";
-    piatti.forEach(piatto => {
-        const item = document.createElement('div');
-        item.classList.add('menu-item');
-
-        const img = document.createElement('img');
-        img.src = piatto.img;
-        img.alt = piatto.nome;
-
-        const titolo = document.createElement('h3');
-        titolo.textContent = piatto.nome;
-
-        const desc = document.createElement('p');
-        desc.textContent = piatto.descrizione;
-
-        item.appendChild(img);
-        item.appendChild(titolo);
-        item.appendChild(desc);
-
-        menuGrid.appendChild(item);
-    });
-}
-
 async function showHome(){
 const homeGrid = document.getElementById('home-grid');
 homeGrid.innerHTML = "";
 const homeImg = [
-    {img: "img/home1.jpg"},
-    {img: "img/home2.jpg"},
-    {img: "img/home3.jpg"},
-    {img: "img/home4.jpg"},
-    {img: "img/home5.jpg"},
-    {img: "img/home6.jpg"},
-    {img: "img/home7.jpg"},
-    {img: "img/home8.jpg"},
-    {img: "img/home9.jpg"},
-    {img: "img/home10.jpg"},
-    {img: "img/home11.jpg"},
-    {img: "img/home12.jpg"}
+    {img: "img/01.jpg"},
+    {img: "img/02.jpg"},
+    {img: "img/03.jpg"}
 ];
     homeImg.forEach(hImg => {
         const item = document.createElement('div');
