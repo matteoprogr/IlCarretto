@@ -198,6 +198,7 @@ h2 {
 .contatti-info p {
     font-size: 1.1rem;
     margin: 0.5rem 0;
+    color: #08025e;
 }
 
 .contatti-info a {
@@ -213,14 +214,11 @@ h2 {
     text-decoration: underline;
 }
 /* Social links */
-.contatti-social {
-    margin-top: 1rem;
+.contatti-social, .footer-social {
     display: flex;
     flex-direction: column;
 }
-.footer-social {
-    margin-top: 1rem;
-}
+
 
 .contatti-social a{
     display: inline-block;
@@ -261,3 +259,4 @@ h2 {
     gap: 40px;
     flex-wrap: wrap;
 }
+
