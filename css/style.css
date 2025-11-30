@@ -192,13 +192,13 @@ h2 {
 
 #contatti h2 {
     margin-bottom: 1.5rem;
-    /*color: #08025e;*/
 }
 
 .contatti-info p {
     font-size: 1.1rem;
     margin: 0.5rem 0;
     color: #08025e;
+    text-align: center;
 }
 
 .contatti-info a {
@@ -211,10 +211,10 @@ h2 {
 }
 
 .contatti-info a:hover {
-    text-decoration: underline;
+    color: #fff;
 }
 /* Social links */
-.contatti-social, .footer-social {
+.contatti-social, .contatti-info {
     display: flex;
     flex-direction: column;
 }
@@ -233,7 +233,7 @@ h2 {
     display: inline-block;
     margin: 0 0.5rem;
     font-size: 1.2rem;
-    color: #edb04d; /* giallo-arancio */
+    color: #edb04d;
     text-decoration: none;
     transition: color 0.3s;
 }
@@ -253,10 +253,20 @@ h2 {
 }
 
 .contatti-container{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    gap: 40px;
-    flex-wrap: wrap;
-}
+     display: flex;
+     justify-content: space-evenly;
+     align-items: flex-start;
+     gap: 40px;
+     flex-wrap: wrap;
+     border: 1px solid #fff;
+     padding: 15px;
+     border-radius: 6px;
+ }
+
+ /* Mobile */
+ @media (max-width: 768px) {
+     .contatti-container {
+         justify-content: center;
+     }
+ }
 
